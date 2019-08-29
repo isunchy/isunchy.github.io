@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" slick-uniqueid="3">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="Chunyu Sun, Chun-Yu Sun, Tsinghua University, 孙春宇, 清华大学, cuboid abstraction, PrimitiveGen"> 
+<meta name="description" content="Learning Adaptive Hierarchical Cuboid Abstractions of 3D Shape Collections">
+<link rel="stylesheet" href="../isunchy_homepage_files/style/jemdoc.css" type="text/css">
+<style type="text/css">
+</style>
+<title>Cuboid Abstraction</title>
+<link rel="shortcut icon" href="./cuboid_abstraction_files/animal_abstraction.ico" >
+<!--link rel="shortcut icon" type="image/gif" href="./Pengshuai Wang - Homepage_files/img/animated_favicon1.gif" -->
+</head>
+
+
+<body>
+<div id="layout-content" style="margin-top:25px">
+
+<!-- teaser -->
+<table border="0" width="100%"> <tbody>
+<tr>    
+  <td valign="top" align="center">     
+    <b><font size="5" face="Times New Roman" >Learning Adaptive Hierarchical Cuboid Abstractions of 3D Shape Collections</font></b>
+    <br><br>
+  </td>
+</tr>
+
+<tr>
+  <td valign="top" align="center">
+    <font size="4" face="Times New Roman" > <a href="https://isunchy.github.io/"  target="_blank">Chun-Yu Sun</a> </font> <font size="2"><sup>13</sup></font> &emsp;&emsp;
+    <font size="4" face="Times New Roman" > Qian-Fang Zou</a> </font> <font size="2"><sup>2</sup></font> &emsp;&emsp;
+    <font size="4" face="Times New Roman" > <a href="https://xueyuhanlang.github.io/"  target="_blank">Yang Liu</a> </font> <font size="2"><sup>3</sup></font> &emsp;&emsp;
+    <font size="4" face="Times New Roman" > <a href="http://research.microsoft.com/en-us/um/people/xtong/xtong.html"  target="_blank">Xin Tong</a> </font> <font size="2"><sup>3</sup></font>
+    <br> 
+    <font size="2"> <sup>1</sup></font> <font size="3" face="Times New Roman" > <a href="http://www.tsinghua.edu.cn/" target="_blank">Tsinghua University</a></font>
+    &emsp;&emsp;
+    <font size="2"> <sup>3</sup></font> <font size="3" face="Times New Roman" ><a href="http://en.ustc.edu.cn/" target="_blank">University of Science and Technology of China</a> </font>
+     &emsp;&emsp;
+    <font size="2"> <sup>2</sup></font> <font size="3" face="Times New Roman" ><a href="http://research.microsoft.com/en-us/labs/asia/" target="_blank">Microsoft Research Asia</a> </font>
+    <br>
+    <font size="3" face="Times New Roman" > ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2019) </font>
+    <br> <br>
+  </td>
+</tr>
+
+<tr>
+  <td valign="top" align="center">
+      <img width="95%" src="./cuboid_abstraction_files/teaser.png">
+  </td>
+</tr>
+</tbody> </table>
+
+<!-- Abstract -->
+
+
+<table border="0" width="100%"> <tbody>
+<h2>Abstract</h2>
+<tr>
+  <p style="text-align:justify;">
+  <font face="Times New Roman" >
+    Abstracting man-made 3D objects as assemblies of primitives, i.e., shape abstraction, is an important task in 3D shape understanding and analysis. In this paper, we propose an unsupervised learning method for automatically constructing compact and expressive shape abstractions of 3D objects in a class. The key idea of our approach is an adaptive hierarchical cuboid representation that abstracts a 3D shape with a set of parametric cuboids adaptively selected from a hierarchical and multi-level cuboid representation shared by all objects in the class. The adaptive hierarchical cuboid abstraction offers a compact representation for modeling the variant shape structures and their coherence at different abstraction levels. Based on this representation, we design a convolutional neural network (CNN) for predicting the parameters of each cuboid in the hierarchical cuboid representation and the adaptive selection mask of cuboids for each input 3D shape. For training the CNN from an unlabeled 3D shape collection, we propose a set of novel loss functions to maximize the approximation quality and compactness of the adaptive hierarchical cuboid abstraction and present a progressive training scheme to refine the cuboid parameters and the cuboid selection mask effectively.
+    <br>
+    We evaluate the effectiveness of our approach on various 3D shape collections and demonstrate its advantages over the existing cuboid abstraction approach. We also illustrate applications of the resulting adaptive cuboid representations in various shape analysis and manipulation tasks.
+  </font>
+  </p>
+</tr>
+
+<tr>
+  <td align="center" width="25%">
+    <img src="./cuboid_abstraction_files/thumbnail.png" width="200">
+  </td>
+  <td>
+    <strong>Paper</strong> [PDF</a>] <br><br>
+    <strong>Appendix</strong> [PDF</a>] <br><br>
+    <strong>Slides</strong> [PPTX</a>] <br><br>
+    <strong>Code</strong> [<a href="https://github.com/isunchy/cuboid_abstraction" target="_blank">Github</a>] <br><br>
+    <strong>Citation</strong> [BibTeX</a>]<br>
+    <p style="text-align:justify;">
+    <font face="Times New Roman" >
+    Chun-Yu Sun, Qian-Fang Zou, Xin Tong, and Yang Liu. 201X. Learning
+    Adaptive Hierarchical Cuboid Abstractions of 3D Shape Collections. ACM
+    Trans. Graph. 0, 0, Article 0 (201X), 13 pages.
+    </font>
+    </p>      
+  </td>
+</tr>
+</tbody> </table>
+
+<!-- downloads -->
+<!-- <h2>Downloads</h2>
+<p> 
+[<a href="./O-CNN_files/CNN3D.pdf" target="_blank">Paper</a>] 
+[Code(coming soon)] 
+[<a href="O-CNN_files/o-cnn.bib" target="_blank">BibTeX</a>]
+</p> -->
+
+<!-- <h2>Results</h2>
+<img width="100%" src="./O-CNN_files/classification.png">
+<img width="100%" src="./O-CNN_files/segmentation.png">
+<img width="100%" src="./O-CNN_files/retrieval.png"> -->
+
+</div>
+</body>
+</html>
