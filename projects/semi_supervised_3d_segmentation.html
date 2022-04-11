@@ -18,40 +18,42 @@
 <table border="0" width="100%"> <tbody>
 <tr>
   <td valign="top" align="center">
-    <b><font size="5" face="Times New Roman" >Semi-Supervised 3D Shape Segmentation with Multilevel Consistency and Part Substitution</font></b>
+    <b><font size="5" face="Times New Roman" >Semi-Supervised 3D Shape Segmentation with Multilevel Consistency and <br> Part Substitution</font></b>
     <br><br>
   </td>
 </tr>
 
 
-<tr>
+<!-- <tr>
   <td valign="top" align="center">
     <font size="4" face="Times New Roman" > Code will be released soon.</a>&emsp;&emsp;
     <br> <br>
   </td>
-</tr>
+</tr> -->
 
-<!-- <tr>
+<tr>
   <td valign="top" align="center">
-    <font size="4" face="Times New Roman" > <a href="https://isunchy.github.io/"  target="_blank">Chun-Yu Sun</a> </font> <font size="2"><sup>12</sup></font> &emsp;&emsp;
-    <font size="4" face="Times New Roman" > Qian-Fang Zou</a> </font> <font size="2"><sup>23</sup></font> &emsp;&emsp;
+    <font size="4" face="Times New Roman" > <a href="https://isunchy.github.io/"  target="_blank">Chun-Yu Sun</a> </font> <font size="2"><sup>1</sup></font> &emsp;&emsp;
+    <font size="4" face="Times New Roman" > <a href="https://yukichiii.github.io/"  target="_blank">Yu-Qi Yang</a> </font> <font size="2"><sup>1</sup></font> &emsp;&emsp;
+    <font size="4" face="Times New Roman" > <a href="https://haoxiangguo.cn/"  target="_blank">Hao-Xiang Guo</a> </font> <font size="2"><sup>1</sup></font> &emsp;&emsp;
+    <font size="4" face="Times New Roman" > <a href="https://wang-ps.github.io/"  target="_blank">Peng-Shuai Wang</a> </font> <font size="2"><sup>2</sup></font> &emsp;&emsp;
+    <br>
     <font size="4" face="Times New Roman" > <a href="http://research.microsoft.com/en-us/um/people/xtong/xtong.html"  target="_blank">Xin Tong</a> </font> <font size="2"><sup>2</sup></font> &emsp;&emsp;
-    <font size="4" face="Times New Roman" > <a href="https://xueyuhanlang.github.io/"  target="_blank">Yang Liu</a> </font> <font size="2"><sup>2</sup></font>
+    <font size="4" face="Times New Roman" > <a href="https://xueyuhanlang.github.io/"  target="_blank">Yang Liu</a> </font> <font size="2"><sup>2</sup></font> &emsp;&emsp;
+    <font size="4" face="Times New Roman" > Heung-Yeung Shum</a> </font> <font size="2"><sup>1</sup></font>
     <br> 
     <font size="2"> <sup>1</sup></font> <font size="3" face="Times New Roman" > <a href="https://www.tsinghua.edu.cn/publish/thu2018en/index.html" target="_blank">Tsinghua University</a></font>
     &emsp;&emsp;
     <font size="2"> <sup>2</sup></font> <font size="3" face="Times New Roman" ><a href="http://research.microsoft.com/en-us/labs/asia/" target="_blank">Microsoft Research Asia</a> </font>
-    &emsp;&emsp;
-    <font size="2"> <sup>3</sup></font> <font size="3" face="Times New Roman" ><a href="http://en.ustc.edu.cn/" target="_blank">University of Science and Technology of China</a> </font>
     <br>
-    <font size="3" face="Times New Roman" > ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2019) </font>
+    <font size="3" face="Times New Roman" > Computational Visual Media 2022</font>
     <br> <br>
   </td>
-</tr> -->
-<!-- 
+</tr>
+
 <tr>
   <td valign="top" align="center">
-      <img width="95%" src="./cuboid_abstraction_files/teaser.png">
+      <img width="95%" src="./semi_supervised_3d_segmentation_files/consistency_graphical_abstract.png">
   </td>
 </tr>
 </tbody> </table>
@@ -61,33 +63,34 @@
 <tr>
   <p style="text-align:justify;">
   <font face="Times New Roman" >
-    Abstracting man-made 3D objects as assemblies of primitives, i.e., shape abstraction, is an important task in 3D shape understanding and analysis. In this paper, we propose an unsupervised learning method for automatically constructing compact and expressive shape abstractions of 3D objects in a class. The key idea of our approach is an adaptive hierarchical cuboid representation that abstracts a 3D shape with a set of parametric cuboids adaptively selected from a hierarchical and multi-level cuboid representation shared by all objects in the class. The adaptive hierarchical cuboid abstraction offers a compact representation for modeling the variant shape structures and their coherence at different abstraction levels. Based on this representation, we design a convolutional neural network (CNN) for predicting the parameters of each cuboid in the hierarchical cuboid representation and the adaptive selection mask of cuboids for each input 3D shape. For training the CNN from an unlabeled 3D shape collection, we propose a set of novel loss functions to maximize the approximation quality and compactness of the adaptive hierarchical cuboid abstraction and present a progressive training scheme to refine the cuboid parameters and the cuboid selection mask effectively.
-    <br>
-    We evaluate the effectiveness of our approach on various 3D shape collections and demonstrate its advantages over the existing cuboid abstraction approach. We also illustrate applications of the resulting adaptive cuboid representations in various shape analysis and manipulation tasks.
+    The lack of fine-grained 3D shape segmentation data is the main obstacle to developing learning-based 3D segmentation techniques. We propose an effective semi-supervised method for learning 3D segmentations from a few labeled 3D shapes and a large amount of unlabeled 3D data. For the unlabeled data, we present a novel multilevel consistency loss to enforce consistency of  network predictions between  perturbed copies of a 3D shape at multiple levels: point-level, part-level, and hierarchical level. For the labeled data, we develop a simple yet effective part substitution scheme to augment the labeled 3D shapes with more structural variations to enhance training. Our method has been extensively validated on the task of 3D object semantic segmentation on PartNet and ShapeNetPart, and indoor scene semantic segmentation on ScanNet. It exhibits superior performance to  existing semi-supervised and unsupervised pre-training 3D approaches.
   </font>
   </p>
 </tr>
 
 <tr>
   <td align="center" width="25%">
-    <img src="./cuboid_abstraction_files/thumbnail.png" width="200">
+    <img src="./semi_supervised_3d_segmentation_files/thumbnail.png" width="200">
   </td>
   <td>
-    <strong>Paper</strong> [<a href="./cuboid_abstraction_files/PrimitiveGen.pdf" target="_blank">PDF</a>] <br><br>
-    <strong>Appendix</strong> [<a href="./cuboid_abstraction_files/Appendix.pdf" target="_blank">PDF</a>] <br><br>
-    <strong>Slides</strong> [<a href="./cuboid_abstraction_files/SA2019-Cuboid-Abstraction-ChunyuSun-Final.pptx" target="_blank">PPTX</a>] <br><br>
-    <strong>Code</strong> [<a href="https://github.com/isunchy/cuboid_abstraction" target="_blank">Github</a>] <br><br>
-    <strong>Citation</strong> [<a href="./cuboid_abstraction_files/sun2019abstraction.bib" target="_blank">BibTeX</a>]<br>
-    <p style="text-align:justify;">
+    <strong>Paper</strong> [PDF] <br><br>
+    <!-- <strong>Paper</strong> [<a href="./cuboid_abstraction_files/PrimitiveGen.pdf" target="_blank">PDF</a>] <br><br> -->
+    <!-- <strong>Appendix</strong> [<a href="./cuboid_abstraction_files/Appendix.pdf" target="_blank">PDF</a>] <br><br> -->
+    <!-- <strong>Slides</strong> [<a href="./cuboid_abstraction_files/SA2019-Cuboid-Abstraction-ChunyuSun-Final.pptx" target="_blank">PPTX</a>] <br><br> -->
+    <strong>Code</strong> [Github] <br><br>
+    <!-- <strong>Code</strong> [<a href="https://github.com/isunchy/cuboid_abstraction" target="_blank">Github</a>] <br><br> -->
+    <strong>Citation</strong> [BibTeX]<br>
+    <!-- <strong>Citation</strong> [<a href="./cuboid_abstraction_files/sun2019abstraction.bib" target="_blank">BibTeX</a>]<br> -->
+<!--     <p style="text-align:justify;">
     <font face="Times New Roman" >
     Chun-Yu Sun, Qian-Fang Zou, Xin Tong, and Yang Liu. 2019. Learning
     Adaptive Hierarchical Cuboid Abstractions of 3D Shape Collections. ACM
     Trans. Graph. 38, 6, Article 241 (2019), 13 pages.
     </font>
-    </p>
+    </p> -->
   </td>
 </tr>
-</tbody> </table> -->
+</tbody> </table>
 
 </div>
 </body>
